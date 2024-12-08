@@ -21,10 +21,12 @@
         </ul>
     </nav>
 </header>
+<div class="Hid1">
+    <br>
+    <h1>Send Text on Email</h1>
+</div>
 <div class="datas">
     <form action="/SMTPtest" method="post">
-        <br>
-        <h1>Send Text on Email</h1>
         <div class="form-group">
             <input type="text" name="" class="form-input" placeholder="Введіть ваш email">
         </div>
@@ -38,7 +40,7 @@
         </div>
         <div>
             <br>
-            <textarea name="message" id="message" placeholder="Введіть повідомлення"></textarea>
+            <textarea name="message" id="message" placeholder=" Введіть повідомлення"></textarea>
         </div>
         <div>
             <br>
@@ -109,6 +111,7 @@
     font-size: 13px;
     color: rgb(247, 248, 248);
     height: 45px;
+    width: 330px;
     appearance: none;
     transition: border 0.15s ease 0s;
 
@@ -144,10 +147,23 @@
     background: rgb(31, 32, 35);
     color: #d3d3d3;
     height: 140px;
-    width: 205px;
+    width: 330px;
     font-size: 14px;
     font-family: monospace;
     font-weight: 300;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+    .Hid1 {
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 17px;
+    }
+h1 {
+    margin-bottom: 2%;
+    font-family: monospace;
+    font-weight: lighter;
 }
 </style>
 
