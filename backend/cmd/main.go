@@ -36,10 +36,10 @@ func main() {
 
 func SMTPtest(c *gin.Context) {
 	data := Data{
-		SenderEmail: c.PostForm("SenderEmail"),
-		Email:       c.PostForm("Email"),
-		Message:     c.PostForm("Message"),
-		SecretCode:  c.PostForm("SecretCode"),
+		SenderEmail: c.PostForm("senderemail"),
+		Email:       c.PostForm("email"),
+		Message:     c.PostForm("message"),
+		SecretCode:  c.PostForm("secretcode"),
 	}
 	auth := smtp.PlainAuth("", data.SenderEmail, data.SecretCode, "smtp.gmail.com")
 
