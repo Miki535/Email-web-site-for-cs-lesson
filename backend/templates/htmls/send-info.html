@@ -38,7 +38,11 @@
         </div>
         <div>
             <br>
-            <textarea name="message" id="message">Enter message:</textarea>
+            <textarea name="message" id="message" placeholder="Введіть повідомлення"></textarea>
+        </div>
+        <div>
+            <br>
+            <button class="button-style" type="submit">Вислати!</button>
         </div>
 
     </form>
@@ -107,12 +111,14 @@
     height: 45px;
     appearance: none;
     transition: border 0.15s ease 0s;
-    :focus{
+
+    :focus {
         outline: none;
         box-shadow: none;
         border-color: rgb(100, 153, 255);
     }
-.button {
+}
+.button-style {
     display: inline-block;
     outline: none;
     cursor: pointer;
@@ -133,20 +139,15 @@
     box-shadow: inset 0 0 0 2px #616467;
     background-color: transparent;
     height: 48px;
-    :hover{
-        color: #fff;
-        background-color: #616467;
     }
-
-}
-}
-textarea {
+    textarea {
     background: rgb(31, 32, 35);
     color: #d3d3d3;
     height: 140px;
     width: 205px;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 14px;
+    font-family: monospace;
+    font-weight: 300;
 }
 </style>
 
