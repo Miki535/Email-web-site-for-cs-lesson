@@ -28,19 +28,23 @@
 <div class="datas">
     <form action="/SMTPtest" method="post">
         <div class="form-group">
-            <input type="text" name="senderemail" id="senderemail" class="form-input" placeholder="Введіть ваш email">
+            <input type="email" name="senderemail" id="senderemail" class="form-input" placeholder="Введіть ваш email" required>
         </div>
         <div>
             <br>
-            <input type="text" name="secretcode" id="secretcode" class="form-input" placeholder="Введіть секретний код">
+            <input type="text" name="secretcode" id="secretcode" class="form-input" placeholder="Введіть секретний код" required>
+        </div>
+        <div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">що таке цей код?</a>
+            </script>
         </div>
         <div>
             <br>
-            <input type="text" name="email" id="email" class="form-input" placeholder="Email отримувача">
+            <input type="email" name="email" id="email" class="form-input" placeholder="Email отримувача" required>
         </div>
         <div>
             <br>
-            <textarea name="message" id="message" placeholder=" Введіть повідомлення"></textarea>
+            <textarea name="message" id="message" placeholder=" Введіть повідомлення" required></textarea>
         </div>
         <div>
             <br>
@@ -165,6 +169,10 @@ h1 {
     font-family: monospace;
     font-weight: lighter;
 }
+a {
+    font-size: 10px;
+    font-family: monospace;
+    color: rgba(0, 0, 0, 0.62);
+}
 </style>
-
 </html>
