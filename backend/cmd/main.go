@@ -17,14 +17,17 @@ type Data struct {
 func main() {
 	r := gin.Default()
 
-	r.LoadHTMLGlob("templates/*")
+	r.LoadHTMLGlob("../templates/htmls/*")
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{})
 	})
 
-	r.GET("/SMTPtest", func(c *gin.Context) {})
+	r.GET("/SMTPtest", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "send-info.html", gin.H{})
+	})
+
 	r.POST("/SMTPtest", SMTPtest)
-	r.Run()
+	r.Run() //run on localhost:8080
 }
 
 func SMTPtest(c *gin.Context) {
