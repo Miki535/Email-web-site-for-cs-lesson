@@ -51,4 +51,5 @@ func SMTPtest(c *gin.Context) {
 	if err != nil {
 		c.String(http.StatusBadRequest, "Something went wrong")
 	}
+	return
 }
