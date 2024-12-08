@@ -26,6 +26,10 @@ func main() {
 		c.HTML(http.StatusOK, "send-info.html", gin.H{})
 	})
 
+	r.GET("/about", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "about.html", gin.H{})
+	})
+
 	r.POST("/SMTPtest", SMTPtest)
 	r.Run() //run on localhost:8080
 }

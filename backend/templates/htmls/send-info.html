@@ -2,9 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>SendEmail</title>
 </head>
 <body>
-
+<header>
+    <div class="logo">Send Email</div>
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a href="/SMTPtest" class="active">Send Email</a>
+            </li>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/about">About</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 </body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-family: "DejaVu Serif";
+        box-sizing: border-box;
+    }
+    body {
+        background: aliceblue;
+    }
+    header {
+        width: 100%;
+        height: 80px;
+        background: #242424;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 100px;
+    }
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: #D1D1D1;
+    }
+    .nav-bar ul {
+        display: flex;
+    }
+    .nav-bar ul li a {
+        display: block;
+        color: #fefefe;
+        font-size: 20px;
+        padding: 10px 25px;
+        border-radius: 50px;
+        transition: 0.2s;
+        margin: 0 5px;
+    }
+    .nav-bar ul li a:hover {
+        color: #11101b;
+        background: #fefefe;
+    }
+    .nav-bar ul li a.active {
+        color: #11101b;
+        background: #fefefe;
+    }
+</style>
+
 </html>
