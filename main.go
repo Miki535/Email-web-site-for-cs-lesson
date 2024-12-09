@@ -17,7 +17,7 @@ type Data struct {
 func main() {
 	r := gin.Default()
 
-	r.LoadHTMLGlob("../templates/htmls/*")
+	r.LoadHTMLGlob("./templates/htmls/*")
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{})
 	})
