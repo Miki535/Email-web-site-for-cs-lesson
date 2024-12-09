@@ -30,6 +30,10 @@ func main() {
 		c.HTML(http.StatusOK, "about.html", gin.H{})
 	})
 
+	r.GET("/secret-key", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "secret-key.html", gin.H{})
+	})
+
 	r.POST("/SMTPtest", SMTPtest)
 	r.Run() //run on localhost:8080
 }
