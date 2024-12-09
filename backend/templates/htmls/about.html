@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel with Rounded Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/002/206/463/non_2x/technology-background-template-free-vector.jpg");
+            background-color: #f4f4f9;
+        }
+
+        h1{
+            font-size: 22px;
+            font-family: monospace;
+        }
+        a {
+            color: #11101b;
+        }
+        .carousel {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .carousel-container {
+            overflow: hidden;
+            width: 500px;
+            border-radius: 10px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .arrow {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 50%;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .arrow:hover {
+            background-color: #0056b3;
+        }
+
+        .arrow:active {
+            transform: scale(0.95);
+        }
+        .link-button {
+            background-color: #b7b7b7;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="carousel">
+    <button class="arrow left" onclick="prevSlide()">&#8592;</button>
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="carousel-slide">
+                <div class="container">
+                    <img src="https://cdn-icons-png.flaticon.com/512/10755/10755374.png" alt="Image 1">
+                    <h1>Технології проекта</h1>
+                    <p>Якщо цікаво тицяй -></p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="container">
+                    <img src="https://svgmix.com/uploads/skillicons/423ff3-golang.svg" alt="Image 2">
+                    <h1><a href="https://go.dev/">Golang</a></h1>
+                    <p>На цій мові написаний бекенд нашого сайту!</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZULgn7jR5IH6sCNm5PjEnH1xTaSLFJLmx8w&s" alt="Image 3">
+                    <h1><a href="https://en.wikipedia.org/wiki/HTML">HTML</a> <a href="https://en.wikipedia.org/wiki/CSS">CSS</a> <a href="https://simple.wikipedia.org/wiki/JavaScript">JS</a></h1>
+                    <p>А на цьому написана лицева частина сайту!</p>
+                    <div class="link-button">
+                        <a href="/">Повернутись</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="arrow right" onclick="nextSlide()">&#8594;</button>
+</div>
+
+<script>
+    let currentIndex = 0;
+
+    function updateSlidePosition() {
+        const track = document.querySelector('.carousel-track');
+        const slideWidth = document.querySelector('.carousel-slide').offsetWidth;
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    function nextSlide() {
+        const slides = document.querySelectorAll('.carousel-slide');
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+            updateSlidePosition();
+        }
+    }
+
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlidePosition();
+        }
+    }
+</script>
+</body>
+</html>
