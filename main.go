@@ -53,7 +53,7 @@ func SMTPtest(c *gin.Context) {
 	err := smtp.SendMail("smtp.gmail.com:587", auth, data.SenderEmail, to, []byte(fmt.Sprint(msg)))
 
 	if err != nil {
-		c.Redirect(http.StatusFound, "/send-error.html")
+		c.Redirect(http.StatusFound, "/secret-key")
 	} else {
 		c.Redirect(http.StatusSeeOther, "/SMTPtest")
 	}
